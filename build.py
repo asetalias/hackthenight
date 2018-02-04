@@ -11,4 +11,4 @@ if __name__ == "__main__":
     while(1):
         site = make_site(contexts = contexts)
         site.render()
-        time.sleep(5)
+        site.render(use_reloader=True)
