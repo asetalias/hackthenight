@@ -19,12 +19,27 @@
       {% endblock %}
   </head>
   <body>
-    <h1 class="ml-4">hello world</h1>
+    <div id="loader">
+      <div id="loading-center">
+        <div id="loading-center-absolute" class="absolute-center">
+          <div id="loading-object"></div>
+        </div>
+      </div>
+    </div>
+    <div class="background-wrapper" style="background-image: url('static/images/bg-simple-01.jpg');">
+    </div>
+    {% block content %}
 
-    <!-- Scripts -->
+    {% endblock %}
+  
+    <!-- Filters -->
+    {% include 'components/_svg_filters.html' %}
+    <!-- Jquery -->
     <script src="static/js/jquery.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="static/js/bootstrap.min.js"></script> 
 
+    <!-- Custom Scripts -->
     {% block script %}
     {% endblock %}
 

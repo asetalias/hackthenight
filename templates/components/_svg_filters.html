@@ -1,0 +1,12 @@
+<svg style="display:none">
+    <defs>
+        <filter id="blur-filter" x="-2" y="-2" width="200" height="200">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+        </filter>
+        <filter id="glow-filter" x="0" y="0" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="8" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+</svg>

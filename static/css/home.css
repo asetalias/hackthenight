@@ -1,0 +1,83 @@
+#mainWrapper{
+    position: relative;
+}
+#mainWrapper::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.2), rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+    width: 100%;
+    height: 100%;
+}
+#mainWrapper .particles-js-canvas-el{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+#mainWrapper section{
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+#home .wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#home footer{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+}
+#home footer h3{
+    width: 100%;
+    color: #62dbb3;
+    text-shadow: 0 0 10px #62dbb3; 
+    text-align: center;
+    letter-spacing: 5px;
+}
+#home .wrapper>.absolute-center{
+    text-align: center;
+    height: 300px;
+}
+#ayf-logo{
+    width: 200px;
+}
+#ayf-logo, #alias-logo, #amity-logo{
+    opacity: 0;
+}
+#htn-dynamic-logo{
+    opacity: 0;
+}
+#htn-dynamic-logo svg{
+    height: 300px;
+}
+#htn-dynamic-logo svg,
+#tagline-dynamic{
+    filter: url(#glow-filter);
+}
+#htn-dynamic-logo svg path,
+#tagline-dynamic svg path{
+    stroke: #62dbb3!important;
+}
+#tagline-dynamic{
+    opacity: 0;
+}
+#tagline-dynamic svg{
+    height: 80px;
+    width: 100%;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+#tagline-dynamic svg path,
+#tagline-dynamic svg g{
+    font-size: 50px!important;
+}

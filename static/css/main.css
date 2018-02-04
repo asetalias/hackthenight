@@ -2,4 +2,76 @@
 html,body{
   margin: 0;
   padding: 0;
+  background-size: cover;
+}
+.background-wrapper{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: 0.4s all;
+  background-position: center;
+}
+.absolute-center{
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.logo-med{
+  width: 100px;
+  height: auto;
+  position: relative;
+}
+.logo-med-small{
+  width: 75px;
+  height: auto;
+  position: relative;
+}
+
+#loader{
+	background-color: #22313F;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	margin-top: 0px;
+  top: 0px;
+  z-index: 99999;
+}
+#loading-center{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#loading-center-absolute {
+  width: 80px;
+  height: 80px;
+}
+#loading-object{
+	width: 80px;
+	height: 80px;
+	background-color: #FFF;
+	animation: trapezoidLoader 1.2s infinite ease-in-out; 
+}
+#loading-object.default{
+  transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+  -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+}
+@keyframes trapezoidLoader {
+  0% { 
+    transform: perspective(160px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(0deg) rotateY(0deg); 
+  } 50% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(0deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(0deg) ;
+  } 100% { 
+    transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+    -webkit-transform: perspective(160px) rotateX(-180deg) rotateY(-180deg);
+  }
 }
