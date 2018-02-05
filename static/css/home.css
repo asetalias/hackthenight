@@ -58,6 +58,7 @@
 }
 #htn-dynamic-logo svg{
     height: 300px;
+    width: 100%;
 }
 #htn-dynamic-logo svg,
 #tagline-dynamic{

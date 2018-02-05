@@ -1,5 +1,4 @@
 from staticjinja import make_site
-import time
 
 if __name__ == "__main__":
     context_home = {
@@ -8,7 +7,5 @@ if __name__ == "__main__":
     contexts = [
         ('index.html', context_home),
     ]
-    while(1):
-        site = make_site(contexts = contexts)
-        site.render()
-        site.render(use_reloader=True)
+    site = make_site(contexts = contexts)
+    site.render(use_reloader=True)
