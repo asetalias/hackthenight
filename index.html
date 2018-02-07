@@ -27,7 +27,7 @@
   <body>
     <div id="loader">
       <div id="loading-center">
-        <div id="loading-center-absolute" class="absolute-center">
+        <div id="loading-center-absolute" class="absolute-center" style="position: absolute">
           <div id="loading-object"></div>
         </div>
       </div>
@@ -49,7 +49,7 @@
 
  <g>
   <title>background</title>
-  <rect fill="none" id="canvas_background" height="197.28" width="283.89" y="-1" x="-1"/>
+  <rect fill="none" stroke="none" id="canvas_background" height="197.28" width="283.89" y="-1" x="-1"/>
  </g>
  <g>
   <title>Layer 1</title>
@@ -138,6 +138,7 @@
        id="title3543">background</title>
     <rect
        fill="none"
+       stroke="none"
        id="canvas_background"
        height="52"
        width="292"
@@ -309,6 +310,36 @@
 </svg>
                 </div>
             </footer>
+            <div id="timer-box">
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="ddv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="ddc">30</p>
+                        <p class="valtype">DAYS</p>
+                    </div>
+                </div>
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="hhv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="hhc">24</p>
+                        <p class="valtype">HRS</p>
+                    </div>
+                </div>
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="mmv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="mmc">60</p>
+                        <p class="valtype">MINS</p>
+                    </div>
+                </div>
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="ssv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="ssc">60</p>
+                        <p class="valtype">SECS</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>
@@ -334,6 +365,7 @@
 
     <!-- Custom Scripts -->
     
+<script src="static/js/main.js"></script>
 <script src="static/js/jquery.drawsvg.js"></script>
 <script src="static/js/particles.min.js"></script>
 <script>
