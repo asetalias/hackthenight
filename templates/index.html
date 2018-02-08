@@ -24,12 +24,43 @@
                     {% include 'svgs/_24hour.svg' %}
                 </div>
             </footer>
+            <div id="timer-box">
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="ddv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="ddc">30</p>
+                        <p class="valtype">DAYS</p>
+                    </div>
+                </div>
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="hhv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="hhc">24</p>
+                        <p class="valtype">HRS</p>
+                    </div>
+                </div>
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="mmv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="mmc">60</p>
+                        <p class="valtype">MINS</p>
+                    </div>
+                </div>
+                <div class="timer-cells">
+                    <canvas class="timer-views" id="ssv" height="100" width="100"></canvas>
+                    <div class="timer-vals">
+                        <p class="val" id="ssc">60</p>
+                        <p class="valtype">SECS</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </div>
 {% endblock %}
 
 {% block script %}
+<script src="static/js/main.js"></script>
 <script src="static/js/jquery.drawsvg.js"></script>
 <script src="static/js/particles.min.js"></script>
 <script>

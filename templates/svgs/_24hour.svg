@@ -57,6 +57,7 @@
        id="title3543">background</title>
     <rect
        fill="none"
+       stroke="none"
        id="canvas_background"
        height="52"
        width="292"
