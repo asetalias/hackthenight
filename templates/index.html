@@ -18,42 +18,37 @@
                 <div id="htn-dynamic-logo" class="">
                     {% include 'svgs/_htn-line.svg' %}
                 </div>
+                <footer class="text-center w-100">
+                    <div id="tagline-dynamic">
+                        {% include 'svgs/_24hour.svg' %}
+                    </div>
+                    <div id="event-details" class="mt-3">
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-theme event-detail">
+                                <!-- <i class="fas fa-map-marker-alt left"></i> -->
+                                <div class="main">Amity University</div>
+                                <div class="sub">Sec 125, Noida.</div>
+                            </div>
+                            <div class="col-12 col-md-4 text-theme" id="regBtnContainer">
+                                {# temporary disable timer #}
+                                {#% include 'home-sections/_timer.html' %#}
+                                <div id="register-help-msg" style="display:none;"></div>
+                                <a href="http://bit.ly/hackthenight">
+                                    <button class="btn-theme text-theme" id="home-register-btn" data-loc="0">
+                                        Register Now
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-4 text-theme event-detail">
+                                <!-- <i class="fas fa-calendar right"></i> -->
+                                <div class="main">08-09 March 2018</div>
+                                <div class="sub">13:00 - 16:00 (Next Day)</div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>        
             </div>
-            <footer class="text-center w-100">
-                <div id="tagline-dynamic">
-                    {% include 'svgs/_24hour.svg' %}
-                </div>
-            </footer>
-            <div id="timer-box">
-                <div class="timer-cells">
-                    <canvas class="timer-views" id="ddv" height="100" width="100"></canvas>
-                    <div class="timer-vals">
-                        <p class="val" id="ddc">30</p>
-                        <p class="valtype">DAYS</p>
-                    </div>
-                </div>
-                <div class="timer-cells">
-                    <canvas class="timer-views" id="hhv" height="100" width="100"></canvas>
-                    <div class="timer-vals">
-                        <p class="val" id="hhc">24</p>
-                        <p class="valtype">HRS</p>
-                    </div>
-                </div>
-                <div class="timer-cells">
-                    <canvas class="timer-views" id="mmv" height="100" width="100"></canvas>
-                    <div class="timer-vals">
-                        <p class="val" id="mmc">60</p>
-                        <p class="valtype">MINS</p>
-                    </div>
-                </div>
-                <div class="timer-cells">
-                    <canvas class="timer-views" id="ssv" height="100" width="100"></canvas>
-                    <div class="timer-vals">
-                        <p class="val" id="ssc">60</p>
-                        <p class="valtype">SECS</p>
-                    </div>
-                </div>
-            </div>
+                        
         </div>
     </section>
 </div>

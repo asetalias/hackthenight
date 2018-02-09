@@ -20,7 +20,7 @@ html,body{
   left: 0;
   bottom: 0;
   right: 0;
-  position: relative;
+  position: absolute;
 }
 .logo-med{
   width: 100px;
@@ -32,7 +32,21 @@ html,body{
   height: auto;
   position: relative;
 }
-
+@media all and (min-width: 300px){
+  .logo-med-small{
+    width: 40px;
+  }
+}
+.text-theme{
+  color: #62dbb3;
+  text-shadow: 0 0 15px #62dbb3;
+}
+.btn-theme{
+  background: transparent;
+  outline: none;
+  border: 2px solid #62dbb3;
+  border-radius: 5px;
+}
 #loader{
 	background-color: #22313F;
 	height: 100%;

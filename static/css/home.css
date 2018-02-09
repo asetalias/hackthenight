@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Open+Sans+Condensed:300');
 #mainWrapper{
     position: relative;
 }
@@ -44,20 +45,46 @@
 }
 #home .wrapper>.absolute-center{
     text-align: center;
-    height: 300px;
+    height: 250px;
+}
+#amity-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#alias-logo{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 #ayf-logo{
     width: 200px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+@media all and (min-width: 300px){
+    #ayf-logo{
+        margin-top: 30px;
+    }
 }
 #ayf-logo, #alias-logo, #amity-logo{
     opacity: 0;
 }
+#home footer{
+    bottom: 0;
+}
 #htn-dynamic-logo{
     opacity: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 #htn-dynamic-logo svg{
-    height: 300px;
     width: 100%;
+    height: 100%;
 }
 #htn-dynamic-logo svg,
 /*#tagline-dynamic{
@@ -86,23 +113,45 @@
     width: fit-content;
     display: flex;
     justify-content: space-around;
-    margin: 0;
-    position: absolute;
-    left: 32vw;
-    bottom: 0;
 }
 .timer-cells{
     flex-grow: 1;
     position: relative;
     background-color: #00000055;
-    border-radius: 50px;
+    border-radius: 50%;
     margin: 0 2px;
+}
+.timer-views{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+.timer-views circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+    /*animation: countdown 10s linear infinite forwards;*/
+}
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
 }
 .timer-vals{
     position: absolute;
-    top: 30px;
-    left: 33%;
-    width: 35%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     height: auto;
     color: #00F8BA;
     line-height: 1;
@@ -117,4 +166,85 @@
 .valtype{
     font-size: 10px;
     font-weight: bold;
+}
+
+@media all and (min-width: 300px){
+    #timer-box{
+        height: 50px;
+    }
+    .timer-cells{
+        width: 50px;
+    }
+    .timer-vals{
+        padding: 11px;
+    }
+    .val{
+        font-size: 16px;
+    }
+    .valtype{
+        font-size: 8px;
+    }
+}
+#event-details .event-detail{
+    font-family: 'Monoton', monospace;
+    position: relative;
+    padding-left: 1.1em;
+}
+#event-details .event-detail i{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: '';
+    width: 1em;
+    height: 1.1em;
+    margin: auto;
+    font-size: 1.5em;
+}
+#event-details .event-detail i.left{
+    left: 0;
+}
+#event-details .event-detail i.right{
+    right: 0;
+}
+#event-details .event-detail .main{
+    font-size: 1.5em;
+    width: 100%;
+}
+#event-details .event-detail .sub{
+    font-size: 1em;
+    width: 100%;
+}
+#home-register-btn{
+    width: 150px;
+    font-family: 'Monoton', cursive;
+    height: 80px;
+    font-size: 1.5em;
+    outline: none;
+}
+#regBtnContainer{
+    position: relative;
+}
+#register-help-msg{
+    height: 50px;
+    top: -30px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+#home-register-btn{
+    transition: 0.1s all;
+}
+@media all and (max-width: 768px){
+    #event-details .event-detail i{
+        font-size: 0.9em;
+    }
+    #event-details .event-detail .main{
+        font-size: 1em;
+    }
+    #event-details .event-detail .sub{
+        font-size: 0.7em;
+    }
 }

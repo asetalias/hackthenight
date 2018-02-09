@@ -1,3 +1,4 @@
+/* Temporary Disable Countdown
 //Init variables
 
 var kickoff = Date.parse(new Date('2018-03-09T15:00:00+0530'));  //Target date-time parsed in ms
@@ -78,35 +79,51 @@ function countdown(){
 $(window).on("load",function () {
     step = setInterval(countdown,1000);
 });
+*/
 
-$(document).ready(function(){
-    var parallaxContainers = $(".parallax");
-    var menu = $("#primaryMenu");
-    $(window).on('scroll', function(){
-        /** Parallax  
-        window.requestAnimationFrame(function(){
-            for (var i=0; i<parallaxContainers.length; i++){
-                var currentElement = parallaxContainers.eq(i);
-                var scrolled = $(window).scrollTop();
-                var speed = $(currentElement).attr('data-parallax-speed');
-                speed = parseFloat(speed);         
-                if(speed == NaN || speed == undefined){
-                    speed = 0.3;
-                }
-                speed *= 1;
-                currentElement.css({
-                    'transform': 'translate3d(0, ' + scrolled * speed + 'px, 0)'
-                });
-            }
-        });*/
-        var scrolled = $(window).scrollTop();
-        /** Animated Menu **/
-        if(scrolled > menu.height()){
-            menu.removeClass('navbar-default');
-            menu.addClass('navbar-fixed-theme');
+$(document).ready(function(e){
+    var homeRegBtn = $("#home-register-btn");
+    var homeRegisterHelpMsg = $("#register-help-msg");
+    var resgisterTry = 0;
+    homeRegBtn.on("mouseenter click",function(e){
+        $(this).html("If You Can");
+        if($(this).attr("data-loc") == "0" || $(this).attr("data-loc") == "1"){
+            $(this).css("transform", "translatex(-100%)");
+            $(this).attr("data-loc", "-1");
         }else{
-            menu.removeClass('navbar-fixed-theme');
-            menu.addClass('navbar-default');
+            $(this).attr("data-loc", "1");
+            $(this).css("transform", "translatex(100%)");
         }
+        resgisterTry += 1;
+        setRegisterHelpMsg();
+    }).on("mouseleave", function(e){
+        console.log("Check");
+        setTimeout(function(){
+            homeRegBtn.html("Register Now");
+        }, 500);
     });
+    function resetRegBtn(){
+        homeRegBtn.off("mouseenter click mouseleave");
+        homeRegBtn.css("transform", "translatex(0)");
+        homeRegBtn.attr("data-loc", "0");
+        homeRegBtn.html("Register Now");
+        setTimeout(function(){homeRegisterHelpMsg.fadeOut();}, 500);
+    }
+    function setRegisterHelpMsg(){
+        homeRegisterHelpMsg.fadeOut();
+        if(resgisterTry > 2){
+            homeRegisterHelpMsg.html("You can do better than that!");
+        }
+        if(resgisterTry > 4){
+            homeRegisterHelpMsg.html("Oh! Come On Now!");
+        }
+        if(resgisterTry > 6){
+            homeRegisterHelpMsg.html("Try Inspect Element?");
+        }
+        if(resgisterTry > 8){
+            homeRegisterHelpMsg.html("All Right! Reset!");
+            resetRegBtn();
+        }
+        homeRegisterHelpMsg.fadeIn();
+    }
 });
