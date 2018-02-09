@@ -25,6 +25,7 @@
     padding: 30px;
     z-index: 1;
     position: relative;
+    overflow: hidden;
 }
 #home .wrapper{
     position: relative;
