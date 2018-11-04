@@ -8,4 +8,4 @@ if __name__ == "__main__":
         ('index.html', context_home),
     ]
     site = make_site(contexts = contexts)
-    site.render(use_reloader=True)
+    site.render()

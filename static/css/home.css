@@ -220,6 +220,8 @@
     height: 80px;
     font-size: 1.5em;
     outline: none;
+    transition: 0.1s all;
+    cursor: pointer;
 }
 #regBtnContainer{
     position: relative;
@@ -233,9 +235,6 @@
     position: absolute;
     text-transform: uppercase;
     font-size: 1.3em;
-}
-#home-register-btn{
-    transition: 0.1s all;
 }
 @media all and (max-width: 768px){
     #event-details .event-detail i{

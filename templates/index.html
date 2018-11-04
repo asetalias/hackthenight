@@ -11,7 +11,6 @@
         <div class="wrapper">
             <header class="text-center">
                 <img class="logo-med-small float-left" src="static/images/logos/amity.png" id="amity-logo"/>
-                <img class="logo-med mx-auto" src="static/images/logos/ayf.png" id="ayf-logo"/> 
                 <img class="logo-med-small float-right" src="static/images/logos/alias-square-light.png" id="alias-logo"/>
             </header>
             <div class="absolute-center">
@@ -41,8 +40,8 @@
                             </div>
                             <div class="col-12 col-md-4 text-theme event-detail">
                                 <!-- <i class="fas fa-calendar right"></i> -->
-                                <div class="main">08-09 March 2018</div>
-                                <div class="sub">13:00 - 16:00 (Next Day)</div>
+                                <div class="main">08-09 March 2019</div>
+                                <div class="sub">15:00 - 15:00 (Next Day)</div>
                             </div>
                         </div>
                     </div>
@@ -96,13 +95,9 @@
                 }, 500);
             });
             function startPage(){
-                $("#ayf-logo").animate({
-                    opacity: "1"
-                }, 1000, function(){
                     $("#amity-logo, #alias-logo").animate({
                         opacity: "1"
                     }, 1000);
-                });
                 $("#htn-dynamic-logo").css('opacity', '1');
                 var taglineSVG = $("#tagline-dynamic svg").drawsvg({
                     duration: 2000

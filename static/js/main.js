@@ -81,7 +81,7 @@ $(window).on("load",function () {
 });
 */
 
-$(document).ready(function(e){
+/*$(document).ready(function(e){
     var homeRegBtn = $("#home-register-btn");
     var homeRegisterHelpMsg = $("#register-help-msg");
     var resgisterTry = 0;
@@ -126,4 +126,4 @@ $(document).ready(function(e){
         }
         homeRegisterHelpMsg.fadeIn();
     }
-});
+});*/
