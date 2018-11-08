@@ -86,6 +86,10 @@ $(document).ready(function(e){
     var homeRegisterHelpMsg = $("#register-help-msg");
     var resgisterTry = 0;
     homeRegBtn.on("mouseenter click",function(e){
+        if(window.innerWidth < 768){
+            resetRegBtn();
+            return
+        }
         $(this).html("If You Can");
         if($(this).attr("data-loc") == "0" || $(this).attr("data-loc") == "1"){
             $(this).css("transform", "translatex(-100%)");
