@@ -107,21 +107,19 @@ $(document).ready(function(e){
         homeRegBtn.css("transform", "translatex(0)");
         homeRegBtn.attr("data-loc", "0");
         homeRegBtn.html("Register Now");
+        $("#home-register-btn-link").attr('href', $("#home-register-btn-link").attr('data-href'));
         setTimeout(function(){homeRegisterHelpMsg.fadeOut();}, 500);
     }
     function setRegisterHelpMsg(){
         homeRegisterHelpMsg.fadeOut();
         if(resgisterTry > 2){
-            homeRegisterHelpMsg.html("You can do better than that!");
+            homeRegisterHelpMsg.html("Let's Play!");
         }
-        if(resgisterTry > 4){
-            homeRegisterHelpMsg.html("Oh! Come On Now!");
-        }
-        if(resgisterTry > 6){
+        if(resgisterTry > 3){
             homeRegisterHelpMsg.html("Try Inspect Element?");
         }
-        if(resgisterTry > 8){
-            homeRegisterHelpMsg.html("All Right! Reset!");
+        if(resgisterTry > 4){
+            homeRegisterHelpMsg.html("Just Kidding! Don't forget to Register :)");
             resetRegBtn();
         }
         homeRegisterHelpMsg.fadeIn();
