@@ -54,19 +54,13 @@
 }
 #alias-logo{
     position: absolute;
-    top: 0;
-    right: 0;
-}
-#ayf-logo{
-    width: 200px;
-    position: absolute;
     top: -40px;
     left: 0;
     right: 0;
     margin: auto;
 }
 @media all and (min-width: 300px){
-    #ayf-logo{
+    #alias-logo{
         margin-top: 30px;
     }
 }

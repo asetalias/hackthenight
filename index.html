@@ -39,9 +39,9 @@
     <section id="home">
         <div class="wrapper">
             <header class="text-center">
-                <img class="logo-med-small float-left" src="static/images/logos/amity.png" id="amity-logo"/>
-                <img class="logo-med mx-auto" src="static/images/logos/ayf.png" id="ayf-logo"/> 
-                <img class="logo-med-small float-right" src="static/images/logos/alias-square-light.png" id="alias-logo"/>
+                <!-- <img class="logo-med-small float-left" src="static/images/logos/amity.png" id="amity-logo"/> -->
+                <img class="logo-med mx-auto" src="static/images/logos/alias-square-light.png" id="alias-logo"/> 
+                <!-- <img class="logo-med-small float-right" src="static/images/logos/alias-square-light.png" id="alias-logo"/> -->
             </header>
             <div class="absolute-center">
                 <div id="htn-dynamic-logo" class="">
@@ -401,13 +401,9 @@
                 }, 500);
             });
             function startPage(){
-                $("#ayf-logo").animate({
+                $("#amity-logo, #alias-logo").animate({
                     opacity: "1"
-                }, 1000, function(){
-                    $("#amity-logo, #alias-logo").animate({
-                        opacity: "1"
-                    }, 1000);
-                });
+                }, 1000);
                 $("#htn-dynamic-logo").css('opacity', '1');
                 var taglineSVG = $("#tagline-dynamic svg").drawsvg({
                     duration: 2000
