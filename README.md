@@ -1,5 +1,5 @@
 # Hack The Night | 24 hour Hackathon
-This is the official repository of "Hack The Night 2018".
+This is the official repository of "Hack The Night 2019".
 Visit Website at: (hackthenight.asetalias.in)[http://hackthenight.asetalias.in]
 
 ## How to contribute?
